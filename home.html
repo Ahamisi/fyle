@@ -1,298 +1,577 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fyle</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="swiper/css/swiper.min.css">
+html, body{
+  width: 100%;
+  margin: 0px;
+  overflow-x: hidden;
+}
+#first-section, #fifth-section{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows:    minmax(100px, auto);
+    grid-template-columns: minmax(auto, 50%) 1fr;
+    padding: 110px;
+    margin: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 
-</head>
-<body>
-    <section id="first-section">
-        <div class="left-column">
-            <h1 class="looking-for-a-lollip">Looking for a <br> lollipop alternative?</h1>
-            <p class="text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <div class="buttons">
-                <button class="btn-1">Primary CTA</button>&nbsp;&nbsp;
-                <button class="btn-2">Secondary CTA</button>
-            </div>
-        </div>
-        <div class="right-svg">
-            <img src="img/learning.svg" alt="" srcset="">
-        </div>
-    </section>
-    <section id="second-section">
-            <div id="b-div">
-                <h3>This is a heading in<br> two lines</h3>
-            <div class="table-parent">
-                <table>
-                    <thead>
-                        <td class="plain"></td>
-                        <td class="b-bottom">Lollipop</td>
-                        <td class="b-bottom">IceCandy</td>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="plain">Lorem ipsum 1</td>
-                            <td> > </td>
-                            <td> ></td>
-                        </tr>
-                        <tr>
-                            <td class="plain">Lorem ipsum 1</td>
-                            <td> > </td>
-                            <td> ></td>
-                        </tr>
-                        <tr>
-                            <td class="plain">Lorem ipsum 1</td>
-                            <td> > </td>
-                            <td> ></td>
-                        </tr>
-                        <tr>
-                            <td class="plain">Lorem ipsum 1</td>
-                            <td> > </td>
-                            <td> ></td>
-                        </tr>
-                        <tr>
-                            <td class="plain">Lorem ipsum 1</td>
-                            <td> > </td>
-                            <td> ></td>
-                        </tr>
-                        <tr>
-                            <td class="plain">Lorem ipsum 1</td>
-                            <td> > </td>
-                            <td> ></td>
-                        </tr>
-                        <tr>
-                            <td class="plain">Lorem ipsum 1</td>
-                            <td> > </td>
-                            <td> ></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>        
-    </section>
-    <section id="third-section">
-        <h3>Compare pricing today</h3>
-        <p class="text-center">Lorem Ipsum is simply dummy text of the printing and <a href="">typesetting</a></p>
-        <div id="section-variations">
-            <div class="housing-div-one">
-                <span class="variation-component serving-active" data-target="25-serving" data-no="25">25 Serving</span>
-                <span class="variation-component" data-target="50-serving" data-no="50">50 Serving</span>
-                <span class="variation-component" data-target="100-serving" data-no="100">100 Serving</span>
-                <span class="variation-component" data-target="200-serving" data-no="200">200 Serving</span>
-            </div>
-            <div class="toggle-div">
-                <span class="has-after"><strong>Annual</strong></span>
-                <span>
-                    <label class="switch">
-                        <input type="checkbox" id="toggle">
-                        <span class="slider round"></span>
-                      </label>
-                </span>&nbsp;&nbsp;&nbsp;
-                <span>Monthly</span>
-            </div>
-            <div class="housing-div single-max" id="25-serving">
-                <div class="variation-component-two n-active">
-                    <div class="bounded">
-                        <h3 class="fs-20">lollipop</h3>
-                    </div>
-                    <span class="currency" monthly-currency="$25" annual-currency="$12.5">$12.5</span> <span><i class="serving-duration">per year</i></span>
-                    <div class="serving-details">For 25 serving</div>
-                </div>
-                <div class="variation-component-two n-active">
-                    <div class="bounded" style="position: relative;">
-                        <h3 class="fs-20">Icecandy</h3>
-                    </div>
-                    <span class="currency" monthly-currency="$50" annual-currency="$25">$25</span> <span><i class="serving-duration">per year</i></span>
-                    <div class="serving-details">For 25 serving</div>
+}
+.slider-home{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows:    minmax(100px, auto);
+  grid-template-columns: minmax(auto, 50%) 1fr;
+  padding: 110px;
+  margin: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slider-text, .slider-text > h3{
+  text-align: left !important ;
+}
+.ml-20{
+  margin-top: -20px;
+}
+#second-section{
+    height: 100%;
+}
+#b-div{
+    background-attachment: fixed;
+    background-image: url(img/BG.png);
+    height: 350px;
+    width: 100%;
+    padding-top: 20px;
+}
+.active{
+  color: #0099FF;
+}
+.looking-for-a-lollip {
+    color: #31373D;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 58px;
+    text-align: left;
+    margin: 0px;
+
+  }
+  .currency{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 5px;
+  }
+p{
+    color: #31373D;
+    font-size: 16px;
+    font-weight: 400;
+    /* line-height: 22px; */
+}
+.buttons{
+    display: inline-flex;
+}
+h3{
+    font-size: 24px;
+    text-align: center;
+    Color:#31373D;
+    padding: 1x 1px;
+
+}
+.btn-1{
+    background-color: #0099FF;
+    color: #ffffff;
+    border-color: #0099FF;
+    border-radius: 3px;
+    box-shadow: none;
+    padding: 10px 40px;
+    border-radius: 3px;
+
+}
+.btn-1:link,
+.btn-1:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #5e16bd;
+  background-image: linear-gradient(90deg, #501aa8, #870de8);
+  padding: 1rem 2.5rem;
+  height: 6rem;
+  width: 25rem;
+
+  margin-right: 13px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+}
+.btn-1::before {
+  background: #fff;
+  content: "";
+  height: 155px;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  width: 50px;
+  transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn-1::after {
+  background: #fff;
+  content: "";
+  height: 20rem;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 8rem;
+}
+.btn-1__new::before {
+  left: -50%;
+}
+
+.btn-1__new::after {
+  left: -100%;
+}
+
+.btn-1:hover,
+.btn-1:active {
+  transform: translateY(-3px);
+  color: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
+}
+
+.btn-1__new:hover::before {
+  left: 120%;
+  opacity: 0.5s;
+}
+
+.btn-1__new:hover::after {
+  left: 200%;
+  opacity: 0.6;
+}
+.btn-1 span {
+  z-index: 20;
+}
+.fs-20{
+  font-size: 20px;
+  font-weight: 700;
+}
+.bounded{
+  height: 60px;
+  position: relative;
+}
+.btn-2{
+    background-color: transparent;
+    border-radius: 3px;
+    color: black;
+    padding: 10px 40px;
+    border: 2px solid #0099FF;
+}
+.btn-2:hover{
+
+    background-color: #0099FF;
+    border: 2px solid #ffffff;
+    transition: 0.3s ease-out;
+    color: #ffffff;
+}
 
 
-                </div>
-                <div class="variation-component-two">
-                    <div class="bounded">
-                        <h3 class="fs-20">your savings wih lollipop</h3>
-                    </div>
-                    <span class="currency active" monthly-currency="$25" annual-currency="$12.5">$12.5</span> <div><i class="serving-duration">per year</i></div>
-                </div>
-            </div>
-            <div class="housing-div single-max no-display" id="50-serving">
-                <div class="variation-component-two n-active">
-                    <div class="bounded">
-                        <h3 class="fs-20">lollipop</h3>
-                    </div>
-                    <span class="currency" monthly-currency="$50" annual-currency="$25">$25</span> <span><i class="serving-duration">per year</i></span>
-                    <div class="serving-details">For 50 serving</div>
-                </div>
-                <div class="variation-component-two n-active">
-                    <div class="bounded" style="position: relative;">
-                        <h3 class="fs-20">Icecandy</h3>
-                    </div>
-                    <span class="currency" monthly-currency="$100" annual-currency="$50">$50</span> <span><i class="serving-duration">per year</i></span>
-                    <div class="serving-details">For 50 serving</div>
+
+/* 9. hover-slide-right */
+.btn.hover-slide-right::before {
+  top: 0; bottom: 0; left: 0; 
+  height: 100%; width: 0%;
+}
+.btn.hover-slide-right:hover::before {
+  width: 100%;
+}
+.serving-details{
+  text-align: center;
+  margin-left: -10px;
+}
+.right-svg img{
+    padding-left: 30px;
+    height: 300px;
+}
+#fourth-section{
+  margin-top: 70px;
+}
+.left-column{
+  text-align: left;
+  width: 100%;
+  margin-left: 30px;
+}
 
 
-                </div>
-                <div class="variation-component-two">
-                    <div class="bounded">
-                        <h3 class="fs-20">your savings wih lollipop</h3>
-                    </div>
-                    <span class="currency active" monthly-currency="$50" annual-currency="$25">$25</span> <div><i class="serving-duration">per year</i></div>
-                </div>
-            </div>
-            <div class="housing-div single-max no-display" id="100-serving">
-                <div class="variation-component-two n-active">
-                    <div class="bounded">
-                        <h3 class="fs-20">lollipop</h3>
-                    </div>
-                    <span class="currency" monthly-currency="$100" annual-currency="$50">$50</span> <span><i class="serving-duration">per year</i></span>
-                    <div class="serving-details">For 100 serving</div>
-                </div>
-                <div class="variation-component-two n-active">
-                    <div class="bounded" style="position: relative;">
-                        <h3 class="fs-20">Icecandy</h3>
-                    </div>
-                    <span class="currency" monthly-currency="$200" annual-currency="$100">$100</span> <span><i class="serving-duration">per year</i></span>
-                    <div class="serving-details">For 100 serving</div>
+
+/* fourth section styling */
 
 
-                </div>
-                <div class="variation-component-two">
-                    <div class="bounded">
-                        <h3 class="fs-20">your savings wih lollipop</h3>
-                    </div>
-                    <span class="currency active" monthly-currency="$100" annual-currency="$50">$50</span> <div><i class="serving-duration">per year</i></div>
-                </div>
-            </div>
-            <div class="housing-div single-max no-display" id="200-serving">
-                <div class="variation-component-two n-active">
-                    <div class="bounded">
-                        <h3 class="fs-20">lollipop</h3>
-                    </div>
-                    <span class="currency" monthly-currency="$200" annual-currency="$100">$100</span> <span><i class="serving-duration">per year</i></span>
-                    <div class="serving-details">For 200 serving</div>
-                </div>
-                <div class="variation-component-two n-active">
-                    <div class="bounded" style="position: relative;">
-                        <h3 class="fs-20">Icecandy</h3>
-                    </div>
-                    <span class="currency" monthly-currency="$400" annual-currency="$200">$200</span> <span><i class="serving-duration">per year</i></span>
-                    <div class="serving-details">For 200 serving</div>
+
+/* end fourth section styling */
 
 
-                </div>
-                <div class="variation-component-two">
-                    <div class="bounded">
-                        <h3 class="fs-20">your savings wih lollipop</h3>
-                    </div>
-                    <span class="currency active" monthly-currency="$200" annual-currency="$100">$100</span> <div><i class="serving-duration">per year</i></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="fourth-section">
-        <h3>Here's what our customers say</h3>
-        <!-- Slider main container -->
-<!-- <div class="swiper-container" id="slider">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="slider-home">
-                    <div class="left-column left-slider">
-                            <img src="img/Group 4.png"  class="slider-img" alt="" srcset="">
-                    </div>
-                    <div class="right-svg slider-text">
-                            <p>Lorem ipsum is simply dummy text of the printing and typsetting industry. Lorem ipsum has been the industry's standarddummy test over since the 1500s</p>
-                            <div>
-                                <h3 class="text-left"><strong>Raja Ram</strong></h3>
-                                <h5 class="ml-20">Tip World</h5>
-                            </div>
-                        </div>
 
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="slider-home">
-                    <div class="left-column">
-                            <img src="img/Group 4.png"  class="slider-img" alt="" srcset="">
-                    </div>
-                    <div class="right-svg slider-text">
-                            <p>Lorem ipsum is simply dummy text of the printing and typsetting industry. Lorem ipsum has been the industry's standarddummy test over since the 1500s</p>
-                            <div>
-                                <h3 class="text-left"><strong>Raja Ram</strong></h3>
-                                <h5 class="ml-20">Tip World</h5>
-                            </div>
-                        </div>
 
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="slider-home">
-                    <div class="left-column slider-left">
-                            <img src="img/Group 4.png"  class="slider-img" alt="" srcset="">
-                    </div>
-                    <div class="right-svg slider-text">
-                            <p>Lorem ipsum is simply dummy text of the printing and typsetting industry. Lorem ipsum has been the industry's standarddummy test over since the 1500s</p>
-                            <div>
-                                <h3 class="text-left"><strong>Raja Ram</strong></h3>
-                                <h5 class="ml-20">Tip World</h5>
-                            </div>
-                        </div>
 
-                </div>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
+/* table style */
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: none;
+    color: #4a4a4d;
+    font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.15);
+    z-index: 200;
+    padding: 15px;
+  }
+  .plain{
+      background-color: #ffffff;
+      border: none;
+  }
+  th,
+  td {
+    padding: 20px 15px;
+    vertical-align: middle;
+    background: #F9F9F9;
+    border-bottom: 0px;
+  }
+  thead {
+    background: #F9F9F9;
+    color: #31373D;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  /* th:first-child {
+    border-top-left-radius: 5px;
+    text-align: left;
+  }
+  th:last-child {
+    border-top-right-radius: 5px;
+  } */
+  tbody tr:nth-child(even) {
+    background: #f0f0f2;
+  }
+  td {
+    border-bottom: 0px;
+    border-right: 1px solid #cecfd5;
+  }
+  
+  .item-stock,
+  .item-qty {
+    text-align: center;
+  }
+  .item-price {
+    text-align: right;
+  }
+  .item-multiple {
+    display: block;
+  }
+  .b-bottom{
+      border-bottom:1px solid #cecfd5 ;
+  }
+
+/* end table style */
+
+
+#third-section{
+    margin-top: 400px;
+    text-align: center;
+}
+a{
+  color: #0099FF;
+  text-decoration: none;
+}
+a:hover{
+  color: #0099FF;
+  text-decoration: none;
+}
+.text-center{
+  text-align: center !important;
+}
+.text-left{
+  text-align: left;
+}
+#section-variations{
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.housing-div, .housing-div-one{
+  display: flex;
+  margin-top: 30px;
+}
+.variation-component{
+  background-color: #fff;
+  padding: 1rem 2.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  /* min-height: 30px; */
+  padding-top: 20px;
+  cursor: pointer;
+  transition: linear .3s;
+}
+.no-display{
+  display: none !important;
+}
+.can-display{
+  display: flex !important;
+}
+.variation-component:hover{
+  background-color: #f9f9f9;
+  padding: 1rem 2.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  /* min-height: 30px; */
+  padding-top: 20px;
+  cursor: pointer;
+}
+.variation-component-two{
+  background-color: #fff;
+  padding: 70px 26px 70px 26px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  /* min-height: 30px; */
+  width: 40%;
+
+}
+.serving-active{
+  border: 2px solid #0099FF;
+
+}
+
+@keyframes colorChange {
+  from { background-color: #ccc;}
+  50%{ background-color: #A4D9AD;}
+  to {background-color: #4BD663;}
+}
+@keyframes turnON {
+  from { transform: translateX(0px);  }
+  to {  transform: translateX(70px - (40px*0.99) );  box-shadow: -10px 0px 44px 0px #434343;}
+}
+
+
+#Rectangle-path{
+  display: none !important;
+}
+
+
+
+.single-max{
+  padding-top: 50px;  
+}
+.n-active{
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  /* border-top: none; */
+  box-shadow: 4px 0px 1rem -9px rgba(0, 0, 0, 0.22);
+}
+
+label { margin:1.5em auto }
+input { position:absolute; left:-9999px }
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  top: 30px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.has-after{
+  margin-right: -24px;
+}
+.has-after:after{
+  content: '50% off';
+  bottom: -26px;
+  position: relative;
+  left: -52px;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+/* swiper css */
+.slider-img{
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  right: -10px;}
+
+.swiper-container {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+/* end swiper css */
+
+
+
+
+
+
+
+
+/* media queries start */
+@media(max-width: 768px){
+  #first-section{
+      padding: 0px;
+      margin: 36px;
+  }
+  .left-slider{
+    display: none !important;
+  }
+  .slider-home{
+    display: block !important;
+  }
+  .slider-text{
+    text-align:center;
+    display: block;
+  }
+}
+@media (min-width: 769px){
+  #section-variations{
+    width: 53%;
+  
+  }
+}
+@media(max-width: 500px){
+  #section-variations{
+    width: 100%;
+  
+  }
+  #slider, #fourth-section{
+    display: none;
+  }
+  .left-slider{
+    display: none !important;
+  }
+  .slider-home{
+    display: block !important;
+  }
+  .slider-text{
+    text-align:center;
+    display: block;
+  }
+  .single-max{
+    display: block;
     
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    
-    </div>
-         -->
-    </section>
+  }
+  .variation-component-two{
+    width: 100%;
+    margin-bottom:15px;
+    margin-left: 20px;
+  }
+}
+@media(min-width: 1440px){
+  .left-column{
+      margin-left: 100px !important;
+  }
+  .housing-div-one{
+    margin-left: 0px !important;
+    margin-top: 2px;
+  }
+}
+@media(min-width: 2560px){
+  .left-column{
+      margin-left: 450px !important;
+  }
+  .housing-div-one{
+    margin-left: 50px !important;
+    margin-top: 2px;
+  }
+}
+@media(max-width: 425px){
+  #first-section, #fifth-section,#slider-home{
+    display: block !important;
+    margin: none;
+    padding: 5px;
+  }
+  .right-svg{
+    display: none;
+  }
+  .left-column{
+    margin-left: 0px;
+  }
+  .housing-div-one{
+    display: flex;
+  }
+  #section-variations{
+    /* font-size: 5%; */
+  }
+  .variation-component-two{
+    overflow-x: scroll;
+    width: 100%;
+  }
+  #third-section{
+    margin-top: 600px;
+  }
+}
 
+/* end media queries */
 
-
-    <!-- start fifth section -->
-    <section id="fifth-section">
-        <div class="left-column">
-            <h1 class="looking-for-a-lollip">Loved by users,<br> recommended by experts</h1>
-            <p class="text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <div class="buttons">
-                <button class="btn-1">Primary CTA</button>&nbsp;&nbsp;                
-            </div>
-        </div>
-        <div class="right-svg">
-            <img src="img/Group 4.png" alt="" srcset="">
-        </div>
-    </section>
-
-    <!-- end fifth section -->
-    <script src="app.js"></script>
-    <!-- initialize carousel -->
-    <script src="swiper/js/swiper.min.js"></script>
-    <script>
-  var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-  })
-  </script>
-</body>
-</html>
