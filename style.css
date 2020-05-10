@@ -633,7 +633,15 @@ input:checked + .slider:before {
   #slider, #fourth-section {
     display: block;
 }
+    .slider-left{
+    position: block !important;
+}
+
 }
 
 /* end media queries */
 
+  .slider-left{
+    top: 85px !important;
+    position: relative !important;
+}
