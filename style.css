@@ -510,8 +510,11 @@ input:checked + .slider:before {
 @media (min-width: 769px){
   #section-variations{
     width: 53%;
-  
   }
+  .slider-left{
+    top: 85px !important;
+    position: relative !important;
+}
 }
 @media(max-width: 500px){
   #section-variations{
